@@ -1,0 +1,365 @@
+
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #303d4c; 
+    color: white;
+  }
+  
+  .logo img {
+    height: 50px;
+    width: auto;
+    justify-content: flex-start;
+  }
+  .nav-links {
+    margin-left: 800px; 
+  }
+  .nav-links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+  }
+  
+  .nav-links a:hover {
+    color: #e9e3dab6; 
+  }
+ 
+ 
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNoVBURMQ6XJm2AoAKcBCDeqGRF1Uc96r87w&s');
+    background-size: cover; 
+}
+
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(1fr);
+    gap: 80px;
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    height: 100%;
+    width: 100%;
+}
+
+.image-container:nth-child(1) {
+    height: 200px;
+    width: 500px;
+}
+
+.image-container:nth-child(4) {
+    height: 300px; 
+    width: 100%;  
+}
+
+
+.image-container:not(:nth-child(1)):not(:nth-child(4)) {
+    height: 400px; 
+    width: 500px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.image-container2 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-container2 img {
+    width: 80%;
+    height: 70%; 
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.typing-animation {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: 2px solid black; 
+    width: 0; 
+    animation: typing 3s steps(30, end) infinite, blink 1.5s step-end infinite alternate;
+}
+
+
+@keyframes typing {
+    0% {
+        width: 0%; 
+    }
+    25% {
+        width: 50%; 
+    }
+    50% {
+        width: 100%; 
+    }
+    75% {
+        width: 50%; 
+    }
+    100% {
+        width: 0%; 
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: black; 
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+.image-container:nth-child(2) img {
+    transition: transform 0.3s ease, filter 0.3s ease; 
+    filter: grayscale(100%); 
+}
+
+.image-container:nth-child(2):hover img {
+    transform: scale(1.2); 
+    filter: grayscale(0); 
+}
+
+.bouncing-balls {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    height: 100%; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+
+.bouncing-balls .ball {
+    width: 30px; 
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    position: relative; 
+    animation: bounce 2s infinite; 
+}
+
+
+.bouncing-balls .ball1 {
+    animation-duration: 2s; 
+}
+
+.bouncing-balls .ball2 {
+    animation-duration: 1.5s; 
+}
+
+.bouncing-balls .ball3 {
+    animation-duration: 1s; 
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-80px); 
+    }
+}
+
+.car-container {
+    position: relative; 
+    display: block; 
+    height: 200px; 
+    width: 100%; 
+    border: none; 
+    overflow: hidden; 
+}
+
+
+.car-container img {
+    position: absolute; 
+    width: 450px; 
+    height: 200px;
+    animation: move-car 8s linear infinite; 
+}
+
+
+@keyframes move-car {
+    0% {
+        left: 0; 
+        transform: scaleX(1); 
+    }
+    49.9% {
+        transform: scaleX(1); 
+    }
+    50% {
+        left: calc(100% - 430px); 
+        transform: scaleX(-1); 
+    }
+    99.9% {
+        transform: scaleX(-1); 
+    }
+    100% {
+        left: 0; 
+        transform: scaleX(1); 
+    }
+}
+
+
+.disk {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #d3e473, #1ea95a);
+    border-radius: 50%; 
+    animation: rotateDisk 3s linear infinite; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+
+@keyframes rotateDisk {
+    0% {
+        transform: rotateY(0deg); 
+    }
+    100% {
+        transform: rotateY(360deg); 
+    }
+}
+
+
+.go-to-top {
+    width: 100%; 
+    background-color: #212121; 
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; 
+}
+
+.go-to-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+.go-to-top:hover {
+    background-color: #706e6e; 
+}
+
+.go-to-top a:hover {
+    color: black; 
+}
+
+html{scroll-behavior: smooth;
+
+}
+
+
+.go-to-top {
+    width: 100%; 
+    background-color: #212121; 
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; 
+}
+
+.go-to-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+.go-to-top:hover {
+    background-color: #706e6e; 
+}
+
+.go-to-top a:hover {
+    color: black; 
+}
+
+html{scroll-behavior: smooth;
+
+}
+
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer {
+    background-color: #212121; 
+    color: white;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+
+.footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-dark {
+    background-color: #121212; 
+    padding: 20px 0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.footer-light {
+    background-color: #2a2a2a; 
+    padding: 20px 0;
+    width: 100%;
+}
