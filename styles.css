@@ -8,6 +8,7 @@
     padding: 10px 20px;
     background-color: #303d4c; 
     color: white;
+    justify-content: space-between;
   }
   
   .logo img {
@@ -15,9 +16,10 @@
     width: auto;
     justify-content: flex-start;
   }
+
   .nav-links {
-    margin-left: 800px; 
   }
+
   .nav-links ul {
     list-style-type: none;
     display: flex;
